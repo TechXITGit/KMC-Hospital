@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "KMC Hospital",
+    "slug": "kmc-hospital-app",
+    "scheme": "kmchospital",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kmchospital.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "KMC Hospital needs camera access for doctor-patient video consultations.",
+        "NSMicrophoneUsageDescription": "KMC Hospital needs microphone access for doctor-patient audio and video consultations."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#0B7A75"
+      },
+      "package": "com.kmchospital.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-sqlite",
+      "expo-web-browser",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/favicon.png",
+          "color": "#0B7A75"
+        }
+      ],
+      "@config-plugins/react-native-webrtc",
+      "expo-sharing"
+    ]
+  }
+}
